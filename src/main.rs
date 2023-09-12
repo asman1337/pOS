@@ -3,7 +3,7 @@
 
 use core::panic::PanicInfo;
 
-static FAKE: &[u8] = b"Faking world!";
+static FAKE: &[u8] = b"pOS is running!";
 
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {

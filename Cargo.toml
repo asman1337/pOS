@@ -6,8 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bootloader = "0.11.4"
-
+bootloader = "0.9.23"
 
 [profile.dev]
 panic = "abort"
