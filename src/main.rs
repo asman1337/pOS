@@ -3,23 +3,25 @@
 
 use core::panic::PanicInfo;
 
-static FAKE: &[u8] = b"pOS is running!";
-
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
-    loop {}
-}
+use pos::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    let vga_buffer = 0xb8000 as *mut u8;
+    println!(" _______  _______  _______
+(  ____ )(  ___  )(  ____ \\
+| (    )|| (   ) || (    \\/
+| (____)|| |   | || (_____
+|  _____)| |   | |(_____  )
+| (      | |   | |      ) |
+| )      | (___) |/\\____) |
+|/       (_______)\\_______)\\
 
-    for (i, &byte) in FAKE.iter().enumerate() {
-        unsafe {
-            *vga_buffer.offset(i as isize * 2) = byte;
-            *vga_buffer.offset(i as isize * 2 + 1) = 0xb;
-        }
-    }
+                    v0.1.0");
 
+    loop {}
+}
+
+#[panic_handler]
+fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
