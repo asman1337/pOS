@@ -4,7 +4,7 @@ pOS is a hobby operating system written in Rust by [Asman Mirza](https://in.link
 ## Features
 - [x] External bootloader
 - [x] x86 CPU support
-- [ ] VGA Text mode with customizable font and color palette
+- [x] VGA Text mode with customizable font and color palette
 - [ ] Hardware interrupts
 - [ ] PS/2 Keyboard with customizable layout
 - [ ] Serial output
